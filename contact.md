@@ -7,8 +7,8 @@ permalink: /contact/
 <div class="container py-5">
   <div class="row mb-5">
     <div class="col-lg-8 mx-auto text-center">
-      <h1 class="display-5 fw-bold mb-4">Contact Me</h1>
-      <p class="lead">I'd love to hear from you! Feel free to reach out using any of the methods below.</p>
+      <h1 class="display-5 fw-bold mb-4">Get in Touch</h1>
+      <p class="lead">Ideas evolve in conversation. If you'd like to connect, share thoughts, or collaborate, use the form below.</p>
     </div>
   </div>
   
@@ -20,11 +20,12 @@ permalink: /contact/
           
           <div class="mb-4">
             <h3 class="h5">Email</h3>
-            <p><a href="mailto:your-email@example.com" class="text-decoration-none">your-email@example.com</a></p>
+            <p><a href="mailto:peterodigie@omg.lol" class="text-decoration-none">peterodigie@omg.lol</a></p>
           </div>
           
           <div class="mb-4">
-            <h3 class="h5">Social Media</h3>
+            <h3 class="h5">Social Platforms</h3>
+            <p class="text-muted">Join the conversation about cognition, language, and social structures.</p>
             <div class="d-flex gap-2 mt-3">
               <a href="#" class="btn btn-outline-dark" target="_blank">LinkedIn</a>
               <a href="#" class="btn btn-outline-dark" target="_blank">Twitter</a>
@@ -49,6 +50,18 @@ permalink: /contact/
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="_replyto" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <select class="form-select" id="subject" name="subject">
+                <option selected>Choose a topic</option>
+                <option value="Cognition & Perception">Cognition & Perception</option>
+                <option value="Language & Reality">Language & Reality</option>
+                <option value="Systems & Structures">Systems & Structures</option>
+                <option value="Self & Agency">Self & Agency</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
             
             <div class="mb-3">

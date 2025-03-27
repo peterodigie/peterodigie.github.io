@@ -1,6 +1,6 @@
-# Peter Odigie's Personal Website
+# Chordem's Website
 
-This is the repository for my personal website, built with Jekyll and hosted on GitHub Pages.
+This is the repository for the Chordem website, built with Jekyll and hosted on GitHub Pages.
 
 ## Features
 

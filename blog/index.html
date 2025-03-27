@@ -6,59 +6,104 @@ title: Blog
 <div class="container py-5">
   <div class="row mb-5">
     <div class="col-md-8 mx-auto text-center">
-      <h1 class="fw-bold">Blog</h1>
-      <p class="lead text-muted">Latest thoughts, ideas and updates</p>
+      <h1 class="fw-bold">The Peripatetic Mind</h1>
+      <p class="lead text-muted">Mapping Thought, Society, and the Self</p>
     </div>
   </div>
 
-  <div class="row g-4">
-    {% for post in paginator.posts %}
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h2 class="card-title h5">
-              <a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title | escape }}</a>
-            </h2>
-            <p class="card-text text-muted small">{{ post.date | date: "%B %-d, %Y" }}</p>
-            <p class="card-text">{{ post.excerpt }}</p>
-            <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">Read More</a>
+  <div class="row g-4 mb-5">
+    <div class="col-md-3">
+      <div class="card h-100 bg-light border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Post Categories</h5>
+          <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">🔹 Cognition & Perception</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">🔹 Language & Reality</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">🔹 Systems & Structures</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">🔹 Self & Agency</a>
           </div>
         </div>
       </div>
-    {% endfor %}
+    </div>
+    
+    <div class="col-md-9">
+      <div class="row g-4">
+        {% for post in paginator.posts %}
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h2 class="card-title h5">
+                  <a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title | escape }}</a>
+                </h2>
+                <p class="card-text text-muted small">{{ post.date | date: "%B %-d, %Y" }}</p>
+                <p class="card-text">{{ post.excerpt }}</p>
+                <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+      {% if paginator.total_pages > 1 %}
+      <nav aria-label="Blog pagination" class="my-5">
+        <ul class="pagination justify-content-center">
+          {% if paginator.previous_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span> Previous
+              </a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <span class="page-link">&laquo; Previous</span>
+            </li>
+          {% endif %}
+          
+          <li class="page-item disabled">
+            <span class="page-link">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+          </li>
+          
+          {% if paginator.next_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
+                Next <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <span class="page-link">Next &raquo;</span>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    </div>
   </div>
-
-  {% if paginator.total_pages > 1 %}
-  <nav aria-label="Blog pagination" class="my-5">
-    <ul class="pagination justify-content-center">
-      {% if paginator.previous_page %}
-        <li class="page-item">
-          <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span> Previous
-          </a>
-        </li>
-      {% else %}
-        <li class="page-item disabled">
-          <span class="page-link">&laquo; Previous</span>
-        </li>
-      {% endif %}
-      
-      <li class="page-item disabled">
-        <span class="page-link">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      </li>
-      
-      {% if paginator.next_page %}
-        <li class="page-item">
-          <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
-            Next <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      {% else %}
-        <li class="page-item disabled">
-          <span class="page-link">Next &raquo;</span>
-        </li>
-      {% endif %}
-    </ul>
-  </nav>
-  {% endif %}
+  
+  <div class="row mt-5">
+    <div class="col-md-8 mx-auto">
+      <div class="card border-0 bg-light">
+        <div class="card-body">
+          <h3 class="card-title h4 mb-3">Example Topics</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-transparent border-0 ps-0">
+              <strong>The Cognitive Science of Doubt:</strong> Why We Hesitate and How We Choose
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+              <strong>Linguistic Traps:</strong> How Language Shapes What We Think Is Possible
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+              <strong>Power as a Structure:</strong> Ideological Conditioning in Modern Society
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+              <strong>Self-Concept and Adaptability:</strong> The Psychology of Reinvention
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+              <strong>Why Do We Believe What We Believe?</strong> A Multi-Layered Analysis
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div> 
