@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <article class="blog-post">
+        <h1 class="display-5 fw-bold mb-3">{{ page.title }}</h1>
+        
+        <p class="text-muted mb-4">
+          <small>
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+              {{ page.date | date: "%B %-d, %Y" }}
+            </time>
+            {% if page.author %}
+              • <span>{{ page.author }}</span>
+            {% endif %}
+          </small>
+        </p>
+
+        <div class="blog-post-content">
+          {{ content }}
+        </div>
+
+        <hr class="my-5">
+        
+        <div class="d-flex justify-content-between align-items-center mt-4 pt-2">
+          <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-primary">&larr; Back to Blog</a>
+          
+          <div class="share-buttons">
+            <span class="me-2">Share:</span>
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" class="btn btn-sm btn-outline-secondary me-1" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        
+        {% if site.disqus.shortname %}
+          {% include disqus_comments.html %}
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</div> 

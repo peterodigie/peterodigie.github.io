@@ -1,0 +1,27 @@
+title: Peter Odigie
+description: My Personal Website
+url: https://peterodigie.github.io
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Theme settings
+theme: minima
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore 
