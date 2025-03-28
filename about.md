@@ -25,15 +25,15 @@ permalink: /about/
               <p class="card-text">
                 <strong>Chordem</strong> (KHOR-dem) derives from "chaos" + "order"
                 <ul>
-                  <li>The 'ch' flows smoothly into 'or'</li>
-                  <li>Reminiscent of 'chord', suggesting harmony in chaos</li>
+                  <li>The "ch" flows smoothly into "or," mirroring the interplay of disorder and structure</li>
+                  <li>The resemblance to "chord" suggests harmony emerging from chaos</li>
                 </ul>
               </p>
-              <p class="card-text">It represents a system that achieves organization through disorder. The word itself embodies structured chaos, as in: "The ecosystem maintained its chordem through constant change."</p>
+              <p class="card-text">It represents a system that self-organizes through constant flux—as in, "The ecosystem maintained its chordem through constant change."</p>
             </div>
           </div>
           
-          <p class="lead">This concept of <strong>chordem</strong>—finding structure within chaos—perfectly encapsulates my approach to understanding the world.</p>
+          <p class="lead">This concept of <strong>chordem</strong> encapsulates my approach to understanding the world: order is not imposed but discovered within the turbulence of reality.</p>
         </div>
       </div>
       
